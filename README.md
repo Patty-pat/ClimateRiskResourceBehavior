@@ -1,5 +1,20 @@
 # Does an increased risk of climate shocks affect individual resource extraction behaviour?
 
+Project Description:
+
+This research project aims to investigate the impact of heightened risk from climate-related shocks on individual behaviors regarding resource extraction. In an era where climate change is increasingly affecting various aspects of life, understanding how these risks alter human behavior, particularly in the context of resource utilization, is crucial.
+
+The study focuses on analyzing individual decision-making processes in scenarios with varying degrees of climate risk. Using a combination of empirical data analysis and behavioral modeling, we seek to identify patterns and shifts in resource extraction practices. This includes examining factors such as resource scarcity, perception of climate risk, economic pressures, and adaptive strategies.
+
+Key objectives include:
+
+Assessing how the perception of increased climate risk influences individual choices in resource extraction.
+Identifying socio-economic factors that mediate this relationship.
+Developing predictive models to understand future trends in resource extraction behavior under different climate risk scenarios.
+This research is significant as it contributes to our understanding of human adaptive strategies in the face of climate change. The findings could inform policy-making, particularly in resource management and climate change mitigation strategies, and provide insights for communities directly impacted by these changes.
+
+[![image](https://img.shields.io/github/actions/workflow/status/Patty-pat/ClimateRiskResourceBehavior/main.yml?branch=main)](https://github.com/Patty-pat/ClimateRiskResourceBehavior/actions?query=branch%3Amain)
+[![image](https://codecov.io/gh/Patty-pat/ClimateRiskResourceBehavior/branch/main/graph/badge.svg)](https://codecov.io/gh/Patty-pat/ClimateRiskResourceBehavior)
 
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/Patty-pat/ClimateRiskResourceBehavior/main.svg)](https://results.pre-commit.ci/latest/github/Patty-pat/ClimateRiskResourceBehavior/main)
 [![image](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
@@ -19,8 +34,17 @@ To build the project, type
 $ pytask
 ```
 
+To run O-TREE game on developer server, type
+```console
+$ pip install -U otree
+$ otree devserver
+```
+
 ## Credits
 
 This project was created with [cookiecutter](https://github.com/audreyr/cookiecutter)
 and the
 [econ-project-templates](https://github.com/OpenSourceEconomics/econ-project-templates).
+
+O-tree software was developed by - Chen, D.L., Schonger, M., Wickens, C., 2016. oTree - An open-source platform for laboratory, online and field experiments. Journal of Behavioral and Experimental Finance, vol 9: 88-97
+# final-project-Patty-pat-1
