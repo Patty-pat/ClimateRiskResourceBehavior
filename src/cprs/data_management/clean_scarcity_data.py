@@ -116,7 +116,7 @@ def order_sort_drop(df_combined):
     return df_combined.sort_values(by=["ROUND", "GROUPID_ALL"])
 
 
-def _clean_shock_data(df_main):
+def _clean_scarcity_data(df_main):
     df_combined = keep_and_append_to_long(df_main)
     df_combined = create_new_variables(df_combined)
     return order_sort_drop(df_combined)

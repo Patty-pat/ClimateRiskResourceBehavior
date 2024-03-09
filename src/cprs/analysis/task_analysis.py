@@ -8,7 +8,7 @@ from cprs.analysis.nash_baseline import _plot_baseline_nash
 from cprs.analysis.nash_scarcity import _plot_scarcity_nash
 from cprs.analysis.plot_anticipation_results import _plot_anticipation_game_behavior
 from cprs.analysis.plot_baseline_results import _plot_baseline_game_behavior
-from cprs.analysis.plot_shock_results import _plot_shock_game_behavior
+from cprs.analysis.plot_scarcity_results import _plot_scarcity_game_behavior
 from cprs.config import BLD, SRC
 
 _PRODUCTS1 = {
@@ -61,12 +61,12 @@ def task_plot_anticipation(
 
 
 @task
-def task_plot_anticipation(
-    depends_on=BLD / "data" / "shock_clean.arrow",
+def task_plot_scarcity(
+    depends_on=BLD / "data" / "scarcity_clean.arrow",
     produces=_PRODUCTS3,
 ):
     df = pd.read_feather(depends_on)
-    _plot_shock_game_behavior(df)
+    _plot_scarcity_game_behavior(df)
 
 
 @task

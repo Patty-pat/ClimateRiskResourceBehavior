@@ -6,7 +6,7 @@ from cprs.config import BLD
 
 def load_shock_data(df):
     return pd.read_feather(
-        BLD / "data" / "shock_clean.arrow",
+        BLD / "data" / "scarcity_clean.arrow",
     )  # Adjust the path and file name
 
 
@@ -107,7 +107,7 @@ def plot_group_behavior_shock(df):
     return df
 
 
-def _plot_shock_game_behavior(df):
+def _plot_scarcity_game_behavior(df):
     df = load_shock_data(df)
     plot_individual_behavior_shock(df)
     plot_group_behavior_shock(df)
