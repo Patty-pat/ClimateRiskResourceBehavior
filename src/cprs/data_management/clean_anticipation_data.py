@@ -27,8 +27,8 @@ def keep_and_append_to_long(df_main):
             if col.startswith(f"cs3_{j}"):
                 df_subset = df_subset.rename(columns={col: col[5:] + "_2"})
 
-        df_combined = pd.concat([df_combined, df_subset], ignore_index=True)
-    return df_combined
+        return pd.concat([df_combined, df_subset], ignore_index=True)
+    return None
 
 
 def create_new_variables(df_combined):
@@ -74,6 +74,10 @@ def create_new_variables(df_combined):
             f"other_take{i}"
         ]
 
+    return df_combined
+
+
+def rename_anticipation_variables(df_combined):
     rename_dict = {
         "participant_id_in_session": "playerid2",
         "subsessionround_number_2": "round_num_2",
@@ -83,7 +87,6 @@ def create_new_variables(df_combined):
         "groupcurrent_trees_2": "current_trees_2",
         "groupregrowth_2": "regrowth_2",
     }
-
     # Renaming the columns
     return df_combined.rename(columns=rename_dict)
 
@@ -108,7 +111,6 @@ def order_sort_drop(df_combined):
             "other_take3",
         ],
     )
-
     # Sorting the DataFrame
     return df_combined.sort_values(by=["ROUND", "GROUPID_ALL"])
 
@@ -116,4 +118,5 @@ def order_sort_drop(df_combined):
 def _clean_anticipation_data(df_main):
     df_combined = keep_and_append_to_long(df_main)
     df_combined = create_new_variables(df_combined)
+    df_combined = rename_anticipation_variables(df_combined)
     return order_sort_drop(df_combined)

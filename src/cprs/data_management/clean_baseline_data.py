@@ -71,6 +71,10 @@ def create_new_variables(df_combined):
             f"other_take{i}"
         ]
 
+    return df_combined
+
+
+def rename_baseline_variables(df_combined):
     rename_dict = {
         "participant_id_in_session": "playerid1",
         "subsessionround_number_1": "round_num_1",
@@ -80,9 +84,10 @@ def create_new_variables(df_combined):
         "groupcurrent_trees_1": "current_trees_1",
         "groupregrowth_1": "regrowth_1",
     }
-
     # Renaming the columns
-    return df_combined.rename(columns=rename_dict)
+    df_combined.rename(columns=rename_dict)
+
+    return df_combined
 
 
 def order_sort_drop(df_combined):
@@ -105,12 +110,14 @@ def order_sort_drop(df_combined):
             "other_take3",
         ],
     )
-
     # Sorting the DataFrame
-    return df_combined.sort_values(by=["ROUND", "GROUPID_ALL"])
+    df_combined.sort_values(by=["ROUND", "GROUPID_ALL"])
+
+    return df_combined
 
 
 def _clean_baseline_data(df_main):
     df_combined = keep_and_append_to_long(df_main)
     df_combined = create_new_variables(df_combined)
+    df_combined = rename_baseline_variables(df_combined)
     return order_sort_drop(df_combined)

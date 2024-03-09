@@ -9,33 +9,43 @@ def remove_dots_in_variable_names(df):
     for column in df.columns:
         new_column = column.replace(".", "")
         df = df.rename(columns={column: new_column})
+
     return df
 
 
-def create_global_identifiers(df):
+def create_global_identifier_player_number(df):
     df["PLAYER_NUM"] = df.index + 1
+    return df
 
+
+def create_global_identifier_lab_session_number(df):
     df["LAB_SESSION"] = pd.cut(
         df["PLAYER_NUM"],
         bins=[0, 24, 48, float("inf")],
         labels=[1, 2, 3],
     )
+    return df
+
+
+def create_global_identifier_group_id_all_subjects(df):
     df["GROUPID_ALL"] = df["CS2_Forest5groupid_in_subsession"]
     df.loc[df["LAB_SESSION"] == 2, "GROUPID_ALL"] += 8
     df.loc[df["LAB_SESSION"] == 3, "GROUPID_ALL"] += 16
-
     cols_to_order = ["PLAYER_NUM", "LAB_SESSION", "GROUPID_ALL"]
     new_columns = cols_to_order + (df.columns.drop(cols_to_order).tolist())
     return df[new_columns]
 
 
-def rename_remove_participants_identifier(df):
+def rename_relevant_participants_identifier(df):
     participant_vars = [col for col in df.columns if col.startswith("participant")]
 
     for var in participant_vars:
         new_var_name = "participant_" + var[11:]
         df = df.rename(columns={var: new_var_name})
+    return df
 
+
+def remove_irrelevant_and_empty_participants_identifier(df):
     columns_to_drop = [
         "participant_label",
         "participant__is_bot",
@@ -53,7 +63,7 @@ def rename_remove_participants_identifier(df):
     return df.drop(columns=columns_to_drop, errors="ignore")
 
 
-def rename_remove_session_identifiers(df):
+def rename_rellevant_session_identifiers(df):
     # Step 1: Get all column names starting with "session"
     session_vars = [col for col in df.columns if col.startswith("session")]
 
@@ -62,6 +72,10 @@ def rename_remove_session_identifiers(df):
         new_var_name = "s_" + var[7:]  # Remove the first 7 characters and prepend 's_'
         df = df.rename(columns={var: new_var_name})
 
+    return df
+
+
+def remove_irrelevant_and_empty_session_identifiers(df):
     columns_to_drop = [
         "s_label",
         "s_mturk_HITId",
@@ -84,21 +98,8 @@ def rename_remove_session_identifiers(df):
     return df.drop(columns=columns_to_drop, errors="ignore")
 
 
-def rename_remove_intro_to_baseline(df):
+def rename_rellevant_intro_to_baseline(df):
     df = df.rename(columns={"CS1_Intro1playerid_in_group": "player_cubicle"})
-
-    # Label for 'player_cubicle' (Note: Pandas does not store labels like Stata. This is just a comment for reference)
-    # "Player's cubicle number in Lab Session 1"
-
-    # Step 2: Drop specific variables
-    columns_to_drop = [
-        "CS1_Intro1playerrole",
-        "CS1_Intro1playercode",
-        "CS1_Intro1playerpayoff",
-        "CS1_Intro1groupid_in_subsession",
-        "CS1_Intro1subsessionround_number",
-    ]
-    df = df.drop(columns=columns_to_drop, errors="ignore")
 
     # Step 3: Rename a group of variables (cs1_intro1player*)
     cs1_intro1player_vars = [
@@ -118,7 +119,19 @@ def rename_remove_intro_to_baseline(df):
     return df.rename(columns={"cs1_num_failed_attempts": "failed_attem1"})
 
 
-def rename_remove_baseline(df):
+def remove_irrelevant_intro_to_baseline(df):
+    # Step 2: Drop specific variables
+    columns_to_drop = [
+        "CS1_Intro1playerrole",
+        "CS1_Intro1playercode",
+        "CS1_Intro1playerpayoff",
+        "CS1_Intro1groupid_in_subsession",
+        "CS1_Intro1subsessionround_number",
+    ]
+    return df.drop(columns=columns_to_drop, errors="ignore")
+
+
+def rename_rellevant_baseline_variables(df):
     # Renaming variables that follow a pattern
     for j in range(1, 6):
         cs2_forest_vars = [
@@ -129,12 +142,18 @@ def rename_remove_baseline(df):
             df = df.rename(columns={var: new_var_name})
 
     # Renaming certain variables
-    df = df.rename(
+    return df.rename(
         columns={
             "cs2_5groupid_in_subsession": "groupid1",
             "cs2_5playerid_in_group": "memberid1",
         },
     )
+
+
+def remove_irrelevant_baseline_variables(df):
+    # Additional specific variables to drop
+    df = df.drop(columns=["cs2_5playerrole", "cs2_5playerpayoff"], errors="ignore")
+
     # Dropping specific variables
     for i in range(1, 5):
         drop_vars = [
@@ -146,12 +165,10 @@ def rename_remove_baseline(df):
             f"cs2_{i}playerpotential_payof",
         ]
         df = df.drop(columns=drop_vars, errors="ignore")
-
-    # Additional specific variables to drop
-    return df.drop(columns=["cs2_5playerrole", "cs2_5playerpayoff"], errors="ignore")
+    return df
 
 
-def rename_remove_anticipation(df):
+def rename_rellevant_anticipation_variables(df):
     # Renaming variables that follow a pattern
     for j in range(1, 6):
         cs3_anti_vars = [col for col in df.columns if col.startswith(f"CS3_Anti{j}")]
@@ -160,7 +177,7 @@ def rename_remove_anticipation(df):
             new_var_name = "cs3_" + var[9:]
             df = df.rename(columns={var: new_var_name})
     # Renaming certain variables
-    df = df.rename(
+    return df.rename(
         columns={
             "cs3_1grouphigh_probability": "high_probability",
             "cs3_5groupid_in_subsession": "groupid2",
@@ -172,6 +189,8 @@ def rename_remove_anticipation(df):
         },
     )
 
+
+def remove_irrelevant_anticipation_variables(df):
     # Dropping specific variables
     for i in range(1, 5):
         drop_vars_i = [
@@ -210,7 +229,7 @@ def rename_remove_anticipation(df):
     )
 
 
-def rename_remove_shock(df):
+def rename_relevant_scarcity_variables(df):
     for j in range(1, 6):
         cs4_shock_vars = [col for col in df.columns if col.startswith(f"CS4_Shock{j}")]
         for var in cs4_shock_vars:
@@ -223,7 +242,7 @@ def rename_remove_shock(df):
         df = df.rename(columns={var: new_var_name})
 
     # Renaming certain variables
-    df = df.rename(
+    return df.rename(
         columns={
             "cs4_1playernum_failed_attempts": "failed_attem3",
             "cs4_5groupid_in_subsession": "groupid3",
@@ -231,6 +250,8 @@ def rename_remove_shock(df):
         },
     )
 
+
+def remove_irrelevant_scarcity_variables(df):
     # Dropping specific variables
     for i in range(1, 5):
         drop_vars_i = [
@@ -256,33 +277,54 @@ def rename_remove_shock(df):
     return df.drop(columns=drop_vars_extra, errors="ignore")
 
 
-def rename_remove_questionnaire(df):
+def rename_remove_empty_questionnaire(df):
     # Renaming variables that follow a pattern
-    quest_vars = [col for col in df.columns if col.startswith("CS5_Quest1")]
+    quest_vars = [col for col in df.columns if col.startswith("CS5_Quest1player")]
     for var in quest_vars:
-        new_var_name = "quest_" + var[10:]
+        new_var_name = "quest_" + var[16:]
         df = df.rename(columns={var: new_var_name})
 
-    # Dropping specific variables
-    return df.drop(
-        columns=["quest_groupid_in_subsession", "quest_subsessionround_number"],
-        errors="ignore",
-    )
+    # Dropping empty variables
+    columns_to_drop = [
+        "quest_role",
+        "quest_payoff",
+        "quest_posrec1",
+        "quest_posrec1_ifyes",
+        "quest_altruism1",
+        "quest_altruism1_noanswer",
+        "quest_q13",
+        "quest_q14",
+        "quest_q15",
+        "quest_q18",
+        "quest_q19",
+        "quest_q20",
+        "quest_q21",
+        "quest_q23",
+        "quest_q11",
+        "quest_q12",
+        "quest_subject_of_studi",
+        "CS5_Quest1groupid_in_subsession",
+        "CS5_Quest1subsessionround_number",
+    ]
+    return df.drop(columns=columns_to_drop, errors="ignore")
 
 
-def _clean_data(raw_file):
+def _clean_raw_data(raw_file):
     df = import_raw_file(raw_file)
     df = remove_dots_in_variable_names(df)
-    df = create_global_identifiers(df)
-    df = rename_remove_participants_identifier(df)
-    df = rename_remove_session_identifiers(df)
-    df = rename_remove_intro_to_baseline(df)
-    df = rename_remove_baseline(df)
-    df = rename_remove_anticipation(df)
-    df = rename_remove_shock(df)
-    return rename_remove_questionnaire(df)
-
-
-# if __name__ == "__main__":
-
-print("Data cleaning completed and saved to lab_data_cleaned.arrow.")
+    df = create_global_identifier_player_number(df)
+    df = create_global_identifier_lab_session_number(df)
+    df = create_global_identifier_group_id_all_subjects(df)
+    df = rename_relevant_participants_identifier(df)
+    df = remove_irrelevant_and_empty_participants_identifier(df)
+    df = rename_rellevant_session_identifiers(df)
+    df = remove_irrelevant_and_empty_session_identifiers(df)
+    df = rename_rellevant_intro_to_baseline(df)
+    df = remove_irrelevant_intro_to_baseline(df)
+    df = rename_rellevant_baseline_variables(df)
+    df = remove_irrelevant_baseline_variables(df)
+    df = rename_rellevant_anticipation_variables(df)
+    df = remove_irrelevant_anticipation_variables(df)
+    df = rename_relevant_scarcity_variables(df)
+    df = remove_irrelevant_scarcity_variables(df)
+    return rename_remove_empty_questionnaire(df)
