@@ -90,7 +90,7 @@ def task_plot_nash_anticipation(
 
 
 @task
-def task_plot_scarcity_anticipation(
+def task_plot_nash_scarcity(
     depends_on=SRC / "data" / "Nash.xlsx",
     sheet_name="Scarcity",
     produces=_NASH3,

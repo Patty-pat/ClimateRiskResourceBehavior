@@ -58,7 +58,7 @@ def plot_nash_equilibrium_and_cooperative_optimum_scarcity(df):
     # Remove the grids
     sns.set_style("white", {"axes.grid": False})
 
-    plt.savefig(BLD / "graphs" / "0.Nash&Cooperative Baseline.png")
+    plt.savefig(BLD / "graphs" / "0.Nash&Cooperative Scarcity.png")
     return df
 
 
@@ -94,7 +94,7 @@ def plot_expected_total_social_payoff_scarcity(df):
     plt.gca().set_facecolor("white")
 
     # Show or save the plot
-    plt.savefig(BLD / "graphs" / "0.Tradeoff1.png")
+    plt.savefig(BLD / "graphs" / "0.Tradeoff3.png")
     return df
 
 
