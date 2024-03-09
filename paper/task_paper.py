@@ -2,10 +2,10 @@
 import shutil
 
 import pytask
-from pytask_latex import compilation_steps as cs
 from cprs.config import BLD, PAPER_DIR
+from pytask_latex import compilation_steps as cs
 
-documents = ["cprs", "cprs_pres"]
+documents = ["cprs"]
 
 for document in documents:
 

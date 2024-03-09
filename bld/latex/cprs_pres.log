@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.7)  3 MAR 2024 17:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.7)  7 MAR 2024 13:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1139,8 +1139,8 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 28.
 \@quotelevel=\count482
 \@quotereset=\count483
 
-(/Users/patriciasuratno/Documents/epp_project/ClimateRiskResourceBehavior/bld/l
-atex/cprs_pres.aux)
+(/Users/patriciasuratno/Documents/epp_project/final-project-Patty-pat-1/bld/lat
+ex/cprs_pres.aux)
 \openout1 = `cprs_pres.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
@@ -1212,10 +1212,10 @@ LaTeX Font Info:    ... okay on input line 35.
 )
 Package hyperref Info: Link coloring ON on input line 35.
 
-(/Users/patriciasuratno/Documents/epp_project/ClimateRiskResourceBehavior/bld/l
-atex/cprs_pres.out)
-(/Users/patriciasuratno/Documents/epp_project/ClimateRiskResourceBehavior/bld/l
-atex/cprs_pres.out)
+(/Users/patriciasuratno/Documents/epp_project/final-project-Patty-pat-1/bld/lat
+ex/cprs_pres.out)
+(/Users/patriciasuratno/Documents/epp_project/final-project-Patty-pat-1/bld/lat
+ex/cprs_pres.out)
 \@outlinefile=\write7
 \openout7 = `cprs_pres.out'.
 
@@ -1322,13 +1322,13 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'cprs_pres.bbl' found.
 
-(/Users/patriciasuratno/Documents/epp_project/ClimateRiskResourceBehavior/bld/l
-atex/cprs_pres.bbl)
+(/Users/patriciasuratno/Documents/epp_project/final-project-Patty-pat-1/bld/lat
+ex/cprs_pres.bbl)
 Package biblatex Info: Reference section=0 on input line 35.
 Package biblatex Info: Reference segment=0 on input line 35.
 
-(/Users/patriciasuratno/Documents/epp_project/ClimateRiskResourceBehavior/bld/l
-atex/cprs_pres.nav)
+(/Users/patriciasuratno/Documents/epp_project/final-project-Patty-pat-1/bld/lat
+ex/cprs_pres.nav)
 
 Package hyperref Warning: Option `pdfauthor' has already been used,
 (hyperref)                setting the option has no effect on input line 43.
@@ -1380,8 +1380,8 @@ File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 \openout10 = `cprs_pres.snm'.
 
 
-(/Users/patriciasuratno/Documents/epp_project/ClimateRiskResourceBehavior/bld/l
-atex/cprs_pres.aux)
+(/Users/patriciasuratno/Documents/epp_project/final-project-Patty-pat-1/bld/lat
+ex/cprs_pres.aux)
 Package rerunfilecheck Info: File `cprs_pres.out' has not changed.
 (rerunfilecheck)             Checksum: AEA4B6A8AE45636C75679C2F0DFA4493;93.
 Package logreq Info: Writing requests to 'cprs_pres.run.xml'.
@@ -1390,7 +1390,7 @@ Package logreq Info: Writing requests to 'cprs_pres.run.xml'.
  )
 Here is how much of TeX's memory you used:
  30534 strings out of 476025
- 598829 string characters out of 5790018
+ 598799 string characters out of 5790018
  1856388 words of memory out of 5000000
  50370 multiletter control sequences out of 15000+600000
  537505 words of font info for 97 fonts, out of 8000000 for 9000
@@ -1405,8 +1405,8 @@ usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfss1440.pfb></us
 r/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfsx1095.pfb></usr/
 local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr/lo
 cal/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on /Users/patriciasuratno/Documents/epp_project/ClimateRiskResou
-rceBehavior/bld/latex/cprs_pres.pdf (5 pages, 135862 bytes).
+Output written on /Users/patriciasuratno/Documents/epp_project/final-project-Pa
+tty-pat-1/bld/latex/cprs_pres.pdf (5 pages, 135954 bytes).
 PDF statistics:
  112 PDF objects out of 1000 (max. 8388607)
  77 compressed objects within 1 object stream
