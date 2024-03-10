@@ -8,6 +8,4 @@ TEST_DIR = SRC.joinpath("..", "..", "tests").resolve()
 PAPER_DIR = SRC.joinpath("..", "..", "paper").resolve()
 DATA = SRC.joinpath("cprs", "..", "data").resolve()
 
-GROUPS = ["marital_status", "qualification"]
-
-__all__ = ["BLD", "SRC", "TEST_DIR", "PAPER_DIR", "DATA", "GROUPS"]
+__all__ = ["BLD", "SRC", "TEST_DIR", "PAPER_DIR", "DATA"]

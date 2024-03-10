@@ -1,7 +1,7 @@
 import pandas as pd
 
 
-def keep_and_append_to_long(df_main):
+def _keep_and_append_to_long(df_main):
     df_combined = pd.DataFrame()
 
     for j in range(1, 6):
@@ -31,7 +31,7 @@ def keep_and_append_to_long(df_main):
     return None
 
 
-def create_new_variables(df_combined):
+def _create_new_variables(df_combined):
     # Creating new columns
     df_combined["ROUND"] = df_combined["subsessionround_number_2"]
     df_combined["relative_playertake_2"] = df_combined["playertake_2"] / 7
@@ -77,7 +77,7 @@ def create_new_variables(df_combined):
     return df_combined
 
 
-def rename_anticipation_variables(df_combined):
+def _rename_anticipation_variables(df_combined):
     rename_dict = {
         "participant_id_in_session": "playerid2",
         "subsessionround_number_2": "round_num_2",
@@ -91,7 +91,7 @@ def rename_anticipation_variables(df_combined):
     return df_combined.rename(columns=rename_dict)
 
 
-def order_sort_drop(df_combined):
+def _order_sort_drop(df_combined):
     # Reorder ROUND after GROUPID
     cols_to_order = ["PLAYER_NUM", "LAB_SESSION", "GROUPID_ALL", "ROUND"]
     new_columns = cols_to_order + (df_combined.columns.drop(cols_to_order).tolist())
@@ -115,8 +115,8 @@ def order_sort_drop(df_combined):
     return df_combined.sort_values(by=["ROUND", "GROUPID_ALL"])
 
 
-def _clean_anticipation_data(df_main):
-    df_combined = keep_and_append_to_long(df_main)
-    df_combined = create_new_variables(df_combined)
-    df_combined = rename_anticipation_variables(df_combined)
-    return order_sort_drop(df_combined)
+def clean_anticipation_data(df_main):
+    df_combined = _keep_and_append_to_long(df_main)
+    df_combined = _create_new_variables(df_combined)
+    df_combined = _rename_anticipation_variables(df_combined)
+    df_combined = _order_sort_drop(df_combined)

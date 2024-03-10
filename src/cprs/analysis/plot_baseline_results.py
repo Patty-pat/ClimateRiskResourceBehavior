@@ -108,7 +108,6 @@ def plot_group_behavior_baseline(df):
 
 
 def _plot_baseline_game_behavior(df):
-    df = load_baseline_data(df)
-    plot_individual_behavior_baseline(df)
-    plot_group_behavior_baseline(df)
-    return df
+    df = load_baseline_data(df, plt)
+    plot_individual_behavior_baseline(df, plt)
+    return df, plt

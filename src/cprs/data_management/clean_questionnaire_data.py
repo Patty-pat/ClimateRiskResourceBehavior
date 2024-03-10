@@ -1,13 +1,7 @@
-import pandas as pd
-
-from cprs.config import BLD
+# def load_clean_data(df_main):
 
 
-def load_clean_data(df_main):
-    return pd.read_feather(BLD / "data" / "data_clean.arrow")
-
-
-def keep_only_questionnaires_from_clean_data(df_main):
+def _keep_only_questionnaires_from_clean_data(df_main):
     for j in range(1, 6):
         columns_to_keep = (
             [col for col in df_main.columns if col.startswith(f"cs2_compr{j}")]
@@ -34,7 +28,7 @@ def keep_only_questionnaires_from_clean_data(df_main):
     return df_main
 
 
-def create_binary_social_optimum_strategy(df_main):
+def _create_binary_social_optimum_strategy(df_main):
     df_main["social_optimum1"] = df_main["quest_optimumN"].apply(
         lambda x: 1 if x == 3 else 0,
     )
@@ -48,7 +42,7 @@ def create_binary_social_optimum_strategy(df_main):
     return df_main
 
 
-def create_binary_nash_socially_acceptable(df_main):
+def _create_binary_nash_socially_acceptable(df_main):
     df_main["nash_strategy"] = df_main["quest_strategy"].apply(
         lambda x: 1 if x == 5 else 0,
     )
@@ -68,7 +62,7 @@ def create_binary_nash_socially_acceptable(df_main):
     return df_main
 
 
-def recode_eai_questions(df_main):
+def _recode_eai_questions(df_main):
     for col in [
         "quest_eai_7",
         "quest_eai_8",
@@ -86,7 +80,7 @@ def recode_eai_questions(df_main):
     return df_main
 
 
-def create_global_environmental_attitude_average_individual_score(df_main):
+def _create_global_environmental_attitude_average_individual_score(df_main):
     score_columns = [
         "quest_eai_" + str(i) for i in range(1, 25)
     ]  # Adjust if the range is different
@@ -96,7 +90,7 @@ def create_global_environmental_attitude_average_individual_score(df_main):
     return df_main
 
 
-def create_group_average_global_environmental_attitude_average_score(df_main):
+def _create_group_average_global_environmental_attitude_average_score(df_main):
     # Create binary variable 'pro_env' based on 'GEA'
     df_main["pro_env"] = df_main["GEA"].apply(lambda x: 1 if x > 4 else 0)
 
@@ -109,7 +103,7 @@ def create_group_average_global_environmental_attitude_average_score(df_main):
     return df_main
 
 
-def rename_global_preference_survey(df_main):
+def _rename_global_preference_survey(df_main):
     # Risk Preferences
     df_main = df_main.rename(columns={"quest_gps71": "RISK"})
 
@@ -130,7 +124,7 @@ def rename_global_preference_survey(df_main):
     return df_main.rename(columns={"quest_gps73_c": "TRUST"})
 
 
-def mapping_values_of_highest_education(df_main):
+def _mapping_values_of_highest_education(df_main):
     education_map = {
         "Schulabschluss": 1,
         "Ausbildung": 2,
@@ -146,7 +140,7 @@ def mapping_values_of_highest_education(df_main):
     return df_main
 
 
-def rename_climate_shock_perception_questions(df_main):
+def _rename_climate_shock_perception_questions(df_main):
     return df_main.rename(
         columns={
             "quest_q30": "climate_shock_concer",
@@ -157,7 +151,7 @@ def rename_climate_shock_perception_questions(df_main):
     )
 
 
-def recode_study_field_related_to_environment(df_main):
+def _recode_study_field_related_to_environment(df_main):
     df_main.loc[df_main["quest_study_field"] == 3, "quest_study_field"] = 2
     # Mapping 'quest_study_field' values to labels
     field_labels = {1: "1: Yes Related", 2: "2: Not Related"}
@@ -166,15 +160,14 @@ def recode_study_field_related_to_environment(df_main):
     return df_main
 
 
-def _clean_questionnaire_data(df):
-    df_main = load_clean_data(df_main)
-    df_main = keep_only_questionnaires_from_clean_data(df_main)
-    df_main = create_binary_social_optimum_strategy(df_main)
-    df_main = create_binary_nash_socially_acceptable(df_main)
-    df_main = recode_eai_questions(df_main)
-    df_main = create_global_environmental_attitude_average_individual_score(df_main)
-    df_main = create_group_average_global_environmental_attitude_average_score(df_main)
-    df_main = rename_global_preference_survey(df_main)
-    df_main = mapping_values_of_highest_education(df_main)
-    df_main = rename_climate_shock_perception_questions(df_main)
-    return recode_study_field_related_to_environment(df_main)
+def clean_questionnaire_data(df_main):
+    df_main = _keep_only_questionnaires_from_clean_data(df_main)
+    df_main = _create_binary_social_optimum_strategy(df_main)
+    df_main = _create_binary_nash_socially_acceptable(df_main)
+    df_main = _recode_eai_questions(df_main)
+    df_main = _create_global_environmental_attitude_average_individual_score(df_main)
+    df_main = _create_group_average_global_environmental_attitude_average_score(df_main)
+    df_main = _rename_global_preference_survey(df_main)
+    df_main = _mapping_values_of_highest_education(df_main)
+    df_main = _rename_climate_shock_perception_questions(df_main)
+    df_main = _recode_study_field_related_to_environment(df_main)

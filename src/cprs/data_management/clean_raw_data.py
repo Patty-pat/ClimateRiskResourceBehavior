@@ -1,11 +1,11 @@
 import pandas as pd
 
 
-def import_raw_file(raw_file):
+def _import_raw_file(raw_file):
     return pd.read_csv(raw_file)
 
 
-def remove_dots_in_variable_names(df):
+def _remove_dots_in_variable_names(df):
     for column in df.columns:
         new_column = column.replace(".", "")
         df = df.rename(columns={column: new_column})
@@ -13,12 +13,12 @@ def remove_dots_in_variable_names(df):
     return df
 
 
-def create_global_identifier_player_number(df):
+def _create_global_identifier_player_number(df):
     df["PLAYER_NUM"] = df.index + 1
     return df
 
 
-def create_global_identifier_lab_session_number(df):
+def _create_global_identifier_lab_session_number(df):
     df["LAB_SESSION"] = pd.cut(
         df["PLAYER_NUM"],
         bins=[0, 24, 48, float("inf")],
@@ -27,7 +27,7 @@ def create_global_identifier_lab_session_number(df):
     return df
 
 
-def create_global_identifier_group_id_all_subjects(df):
+def _create_global_identifier_group_id_all_subjects(df):
     df["GROUPID_ALL"] = df["CS2_Forest5groupid_in_subsession"]
     df.loc[df["LAB_SESSION"] == 2, "GROUPID_ALL"] += 8
     df.loc[df["LAB_SESSION"] == 3, "GROUPID_ALL"] += 16
@@ -36,7 +36,7 @@ def create_global_identifier_group_id_all_subjects(df):
     return df[new_columns]
 
 
-def rename_relevant_participants_identifier(df):
+def _rename_relevant_participants_identifier(df):
     participant_vars = [col for col in df.columns if col.startswith("participant")]
 
     for var in participant_vars:
@@ -45,7 +45,7 @@ def rename_relevant_participants_identifier(df):
     return df
 
 
-def remove_irrelevant_and_empty_participants_identifier(df):
+def _remove_irrelevant_and_empty_participants_identifier(df):
     columns_to_drop = [
         "participant_label",
         "participant__is_bot",
@@ -63,7 +63,7 @@ def remove_irrelevant_and_empty_participants_identifier(df):
     return df.drop(columns=columns_to_drop, errors="ignore")
 
 
-def rename_rellevant_session_identifiers(df):
+def _rename_rellevant_session_identifiers(df):
     # Step 1: Get all column names starting with "session"
     session_vars = [col for col in df.columns if col.startswith("session")]
 
@@ -75,7 +75,7 @@ def rename_rellevant_session_identifiers(df):
     return df
 
 
-def remove_irrelevant_and_empty_session_identifiers(df):
+def _remove_irrelevant_and_empty_session_identifiers(df):
     columns_to_drop = [
         "s_label",
         "s_mturk_HITId",
@@ -98,7 +98,7 @@ def remove_irrelevant_and_empty_session_identifiers(df):
     return df.drop(columns=columns_to_drop, errors="ignore")
 
 
-def rename_rellevant_intro_to_baseline(df):
+def _rename_rellevant_intro_to_baseline(df):
     df = df.rename(columns={"CS1_Intro1playerid_in_group": "player_cubicle"})
 
     # Step 3: Rename a group of variables (cs1_intro1player*)
@@ -119,7 +119,7 @@ def rename_rellevant_intro_to_baseline(df):
     return df.rename(columns={"cs1_num_failed_attempts": "failed_attem1"})
 
 
-def remove_irrelevant_intro_to_baseline(df):
+def _remove_irrelevant_intro_to_baseline(df):
     # Step 2: Drop specific variables
     columns_to_drop = [
         "CS1_Intro1playerrole",
@@ -131,7 +131,7 @@ def remove_irrelevant_intro_to_baseline(df):
     return df.drop(columns=columns_to_drop, errors="ignore")
 
 
-def rename_rellevant_baseline_variables(df):
+def _rename_rellevant_baseline_variables(df):
     # Renaming variables that follow a pattern
     for j in range(1, 6):
         cs2_forest_vars = [
@@ -150,7 +150,7 @@ def rename_rellevant_baseline_variables(df):
     )
 
 
-def remove_irrelevant_baseline_variables(df):
+def _remove_irrelevant_baseline_variables(df):
     # Additional specific variables to drop
     df = df.drop(columns=["cs2_5playerrole", "cs2_5playerpayoff"], errors="ignore")
 
@@ -168,7 +168,7 @@ def remove_irrelevant_baseline_variables(df):
     return df
 
 
-def rename_rellevant_anticipation_variables(df):
+def _rename_rellevant_anticipation_variables(df):
     # Renaming variables that follow a pattern
     for j in range(1, 6):
         cs3_anti_vars = [col for col in df.columns if col.startswith(f"CS3_Anti{j}")]
@@ -190,7 +190,7 @@ def rename_rellevant_anticipation_variables(df):
     )
 
 
-def remove_irrelevant_anticipation_variables(df):
+def _remove_irrelevant_anticipation_variables(df):
     # Dropping specific variables
     for i in range(1, 5):
         drop_vars_i = [
@@ -229,7 +229,7 @@ def remove_irrelevant_anticipation_variables(df):
     )
 
 
-def rename_relevant_scarcity_variables(df):
+def _rename_relevant_scarcity_variables(df):
     for j in range(1, 6):
         cs4_shock_vars = [col for col in df.columns if col.startswith(f"CS4_Shock{j}")]
         for var in cs4_shock_vars:
@@ -251,7 +251,7 @@ def rename_relevant_scarcity_variables(df):
     )
 
 
-def remove_irrelevant_scarcity_variables(df):
+def _remove_irrelevant_scarcity_variables(df):
     # Dropping specific variables
     for i in range(1, 5):
         drop_vars_i = [
@@ -277,7 +277,7 @@ def remove_irrelevant_scarcity_variables(df):
     return df.drop(columns=drop_vars_extra, errors="ignore")
 
 
-def rename_remove_empty_questionnaire(df):
+def _rename_remove_empty_questionnaire(df):
     # Renaming variables that follow a pattern
     quest_vars = [col for col in df.columns if col.startswith("CS5_Quest1player")]
     for var in quest_vars:
@@ -309,22 +309,22 @@ def rename_remove_empty_questionnaire(df):
     return df.drop(columns=columns_to_drop, errors="ignore")
 
 
-def _clean_raw_data(raw_file):
-    df = import_raw_file(raw_file)
-    df = remove_dots_in_variable_names(df)
-    df = create_global_identifier_player_number(df)
-    df = create_global_identifier_lab_session_number(df)
-    df = create_global_identifier_group_id_all_subjects(df)
-    df = rename_relevant_participants_identifier(df)
-    df = remove_irrelevant_and_empty_participants_identifier(df)
-    df = rename_rellevant_session_identifiers(df)
-    df = remove_irrelevant_and_empty_session_identifiers(df)
-    df = rename_rellevant_intro_to_baseline(df)
-    df = remove_irrelevant_intro_to_baseline(df)
-    df = rename_rellevant_baseline_variables(df)
-    df = remove_irrelevant_baseline_variables(df)
-    df = rename_rellevant_anticipation_variables(df)
-    df = remove_irrelevant_anticipation_variables(df)
-    df = rename_relevant_scarcity_variables(df)
-    df = remove_irrelevant_scarcity_variables(df)
-    return rename_remove_empty_questionnaire(df)
+def clean_raw_data(raw_file):
+    df = _import_raw_file(raw_file)
+    df = _remove_dots_in_variable_names(df)
+    df = _create_global_identifier_player_number(df)
+    df = _create_global_identifier_lab_session_number(df)
+    df = _create_global_identifier_group_id_all_subjects(df)
+    df = _rename_relevant_participants_identifier(df)
+    df = _remove_irrelevant_and_empty_participants_identifier(df)
+    df = _rename_rellevant_session_identifiers(df)
+    df = _remove_irrelevant_and_empty_session_identifiers(df)
+    df = _rename_rellevant_intro_to_baseline(df)
+    df = _remove_irrelevant_intro_to_baseline(df)
+    df = _rename_rellevant_baseline_variables(df)
+    df = _remove_irrelevant_baseline_variables(df)
+    df = _rename_rellevant_anticipation_variables(df)
+    df = _remove_irrelevant_anticipation_variables(df)
+    df = _rename_relevant_scarcity_variables(df)
+    df = _remove_irrelevant_scarcity_variables(df)
+    df = _rename_remove_empty_questionnaire(df)

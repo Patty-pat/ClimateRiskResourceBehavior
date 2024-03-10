@@ -1,7 +1,7 @@
 import pandas as pd
 
 
-def keep_and_append_to_long(df_main):
+def _keep_and_append_to_long(df_main):
     df_combined = pd.DataFrame()
 
     for j in range(1, 6):
@@ -26,23 +26,26 @@ def keep_and_append_to_long(df_main):
                 df_subset = df_subset.rename(columns={col: col[5:] + "_3"})
 
         df_combined = pd.concat([df_combined, df_subset], ignore_index=True)
+    return df_combined
 
 
-def create_ROUND(df_combined):
+def _create_ROUND(df_combined):
     # Creating new columns
     df_combined["ROUND"] = df_combined["subsessionround_number_3"]
+    return df_combined
 
 
-def create_relative_player_and_group_extraction(df_combined):
+def _create_relative_player_and_group_extraction(df_combined):
     df_combined["rel_playertake_3"] = (
         df_combined["playertake_3"] / df_combined["groupceiling_group_take_3"]
     )
     df_combined["rel_grouptake_3"] = df_combined["grouptotal_group_take_3"] / (
         df_combined["groupceiling_group_take_3"] * 3
     )
+    return df_combined
 
 
-def create_starting_number_of_trees_in_every_round(df_combined):
+def _create_starting_number_of_trees_in_every_round(df_combined):
     # Create start trees
     df_combined["start_trees_3"] = df_combined["groupcurrent_trees_3"].shift(1)
     # Replace NaN values in start_trees_1 with 50
@@ -50,13 +53,15 @@ def create_starting_number_of_trees_in_every_round(df_combined):
         (df_combined["start_trees_3"].isna()) & (df_combined["ROUND"] == 1),
         "start_trees_3",
     ] = 50
+    return df_combined
 
 
-def create_relative_number_of_starting_trees_in_every_round(df_combined):
+def _create_relative_number_of_starting_trees_in_every_round(df_combined):
     df_combined["rel_starttrees_3"] = df_combined["start_trees_3"] / 50
+    return df_combined
 
 
-def create_number_of_trees_other_group_member_take(df_combined):
+def _create_number_of_trees_other_group_member_take(df_combined):
     # Then, create the 'othertake' variables using groupby and sum
     # We use a loop to iterate over the different member IDs
     for i in range(1, 4):
@@ -83,9 +88,10 @@ def create_number_of_trees_other_group_member_take(df_combined):
         df_combined.loc[df_combined["memberid3"] == i, "others_take_3"] = df_combined[
             f"other_take{i}"
         ]
+    return df_combined
 
 
-def rename_scarcity_variables(df_combined):
+def _rename_scarcity_variables(df_combined):
     rename_dict = {
         "participant_id_in_session": "playerid3",
         "subsessionround_number_3": "round_num_3",
@@ -100,7 +106,7 @@ def rename_scarcity_variables(df_combined):
     df_combined = df_combined.rename(columns=rename_dict)
 
 
-def order_sort_drop(df_combined):
+def _order_sort_drop(df_combined):
     # Reorder ROUND after GROUPID
     cols_to_order = ["PLAYER_NUM", "LAB_SESSION", "GROUPID_ALL", "ROUND"]
     new_columns = cols_to_order + (df_combined.columns.drop(cols_to_order).tolist())
@@ -125,12 +131,12 @@ def order_sort_drop(df_combined):
     df_combined = df_combined.sort_values(by=["ROUND", "GROUPID_ALL"])
 
 
-def _clean_scarcity_data(df_main):
-    df_combined = keep_and_append_to_long(df_main)
-    df_combined = create_ROUND(df_combined)
-    df_combined = create_relative_player_and_group_extraction(df_combined)
-    df_combined = create_starting_number_of_trees_in_every_round(df_combined)
-    df_combined = create_relative_number_of_starting_trees_in_every_round(df_combined)
-    df_combined = create_number_of_trees_other_group_member_take(df_combined)
-    df_combined = rename_scarcity_variables(df_combined)
-    return order_sort_drop(df_combined)
+def clean_scarcity_data(df_main):
+    df_combined = _keep_and_append_to_long(df_main)
+    df_combined = _create_ROUND(df_combined)
+    df_combined = _create_relative_player_and_group_extraction(df_combined)
+    df_combined = _create_starting_number_of_trees_in_every_round(df_combined)
+    df_combined = _create_relative_number_of_starting_trees_in_every_round(df_combined)
+    df_combined = _create_number_of_trees_other_group_member_take(df_combined)
+    df_combined = _rename_scarcity_variables(df_combined)
+    df_combined = _order_sort_drop(df_combined)
