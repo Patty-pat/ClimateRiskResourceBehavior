@@ -1,0 +1,376 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{chen2016otree}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=a9940017ad7dd8651f47dce93080dd90}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Daniel\bibnamedelima L},
+           giveni={D\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9e3eeff75f1e9632814710e4e5d480cc}{%
+           family={Schonger},
+           familyi={S\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=35c29906438d35cb3104530138d65ce3}{%
+           family={Wickens},
+           familyi={W\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{68cd2761af0dc815e2a0134b0d57eb98}
+      \strng{fullhash}{68cd2761af0dc815e2a0134b0d57eb98}
+      \strng{bibnamehash}{68cd2761af0dc815e2a0134b0d57eb98}
+      \strng{authorbibnamehash}{68cd2761af0dc815e2a0134b0d57eb98}
+      \strng{authornamehash}{68cd2761af0dc815e2a0134b0d57eb98}
+      \strng{authorfullhash}{68cd2761af0dc815e2a0134b0d57eb98}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Behavioral and Experimental Finance}
+      \field{title}{oTree—An open-source platform for laboratory, online, and field experiments}
+      \field{volume}{9}
+      \field{year}{2016}
+      \field{pages}{88\bibrangedash 97}
+      \range{pages}{10}
+    \endentry
+    \entry{falk2018global}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=5f90a9e145596548c0e27f8430eb3b62}{%
+           family={Falk},
+           familyi={F\bibinitperiod},
+           given={Armin},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=de7733c0406c5ce5febab9c48523096d}{%
+           family={Becker},
+           familyi={B\bibinitperiod},
+           given={Anke},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1baf3bef1e1e7d01d5a6b203d8f6ee70}{%
+           family={Dohmen},
+           familyi={D\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=35422f407ff1504ff024c4febfd383b0}{%
+           family={Enke},
+           familyi={E\bibinitperiod},
+           given={Benjamin},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6491b7bc27c657479fc024ac4ed49771}{%
+           family={Huffman},
+           familyi={H\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=77c12a1c8a332abc8ad4cad603c230d3}{%
+           family={Sunde},
+           familyi={S\bibinitperiod},
+           given={Uwe},
+           giveni={U\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{68c1ca0249f4484a6088f7927e5f74a4}
+      \strng{fullhash}{918706b99c46838ee8b42f3dd2435fe8}
+      \strng{bibnamehash}{918706b99c46838ee8b42f3dd2435fe8}
+      \strng{authorbibnamehash}{918706b99c46838ee8b42f3dd2435fe8}
+      \strng{authornamehash}{68c1ca0249f4484a6088f7927e5f74a4}
+      \strng{authorfullhash}{918706b99c46838ee8b42f3dd2435fe8}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Quarterly Journal of Economics}
+      \field{number}{4}
+      \field{title}{Global evidence on economic preferences}
+      \field{volume}{133}
+      \field{year}{2018}
+      \field{pages}{1645\bibrangedash 1692}
+      \range{pages}{48}
+    \endentry
+    \entry{hoenow2021does}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=303cd7e32157c26ffa8f5b6d66de07e3}{%
+           family={Hoenow},
+           familyi={H\bibinitperiod},
+           given={Nils\bibnamedelima Christian},
+           giveni={N\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3c112ea57cd93f894dad98383a1b1cfc}{%
+           family={Kirk},
+           familyi={K\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{a0054820366708c1a8dcd2a918d5717a}
+      \strng{fullhash}{a0054820366708c1a8dcd2a918d5717a}
+      \strng{bibnamehash}{a0054820366708c1a8dcd2a918d5717a}
+      \strng{authorbibnamehash}{a0054820366708c1a8dcd2a918d5717a}
+      \strng{authornamehash}{a0054820366708c1a8dcd2a918d5717a}
+      \strng{authorfullhash}{a0054820366708c1a8dcd2a918d5717a}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{World Development}
+      \field{title}{Does competitive scarcity affect the speed of resource extraction? A common-pool resource lab-in-the-field experiment on land use in northern Namibia}
+      \field{volume}{147}
+      \field{year}{2021}
+      \field{pages}{105623}
+      \range{pages}{1}
+    \endentry
+    \entry{janssen2013breaking}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=8b074ed9bd9e784351f31b5651c486ff}{%
+           family={Janssen},
+           familyi={J\bibinitperiod},
+           given={Marco\bibnamedelima A},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=871d570c115342aae4e692893d2c79aa}{%
+           family={Bousquet},
+           familyi={B\bibinitperiod},
+           given={François},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=edaa12cad0ded5515573399a1010f4a6}{%
+           family={Cardenas},
+           familyi={C\bibinitperiod},
+           given={Juan-Camilo},
+           giveni={J\bibinithyphendelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7619de0fa24e740548fc3051eb7a6074}{%
+           family={Castillo},
+           familyi={C\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d6fdf44786c848b973b46452dba96ec9}{%
+           family={Worrapimphong},
+           familyi={W\bibinitperiod},
+           given={Kobchai},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{2175701f2131682a7d09171b27e71f7e}
+      \strng{fullhash}{e1ffbd96fdb6193209f7c6ff2d1aa406}
+      \strng{bibnamehash}{e1ffbd96fdb6193209f7c6ff2d1aa406}
+      \strng{authorbibnamehash}{e1ffbd96fdb6193209f7c6ff2d1aa406}
+      \strng{authornamehash}{2175701f2131682a7d09171b27e71f7e}
+      \strng{authorfullhash}{e1ffbd96fdb6193209f7c6ff2d1aa406}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Ecological Economics}
+      \field{title}{Breaking the elected rules in a field experiment on forestry resources}
+      \field{volume}{90}
+      \field{year}{2013}
+      \field{pages}{132\bibrangedash 139}
+      \range{pages}{8}
+    \endentry
+    \entry{maldonado2009does}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=303da0db16fcf8da8d99121da9e422f8}{%
+           family={Maldonado},
+           familyi={M\bibinitperiod},
+           given={Jorge\bibnamedelima H},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=654bc963a707aae03ca3705d0a7ed583}{%
+           family={Moreno\bibnamedelima Sánchez},
+           familyi={M\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={Rocio\bibnamedelimb del\bibnamedelima Pilar},
+           giveni={R\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{037771a17aefc11ddf8aa5aa664c1bb3}
+      \strng{fullhash}{037771a17aefc11ddf8aa5aa664c1bb3}
+      \strng{bibnamehash}{037771a17aefc11ddf8aa5aa664c1bb3}
+      \strng{authorbibnamehash}{037771a17aefc11ddf8aa5aa664c1bb3}
+      \strng{authornamehash}{037771a17aefc11ddf8aa5aa664c1bb3}
+      \strng{authorfullhash}{037771a17aefc11ddf8aa5aa664c1bb3}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Evidence from Fishers' Experimental Responses (October 1, 2009). Documento CEDE}
+      \field{number}{2009-22}
+      \field{title}{Does scarcity exacerbate the tragedy of the commons? Evidence from fishers' experimental responses}
+      \field{year}{2009}
+    \endentry
+    \entry{milfont2007}{unpublished}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=0010924e79cf70294fca8388b6097a18}{%
+           family={Milfont},
+           familyi={M\bibinitperiod},
+           given={Taciano\bibnamedelima L.},
+           giveni={T\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ed42c7b47f500f249e60efb64c5a2dfa}{%
+           family={Duckitt},
+           familyi={D\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{61b3fddb2be4e7b4d7ef24e3c136c0fa}
+      \strng{fullhash}{61b3fddb2be4e7b4d7ef24e3c136c0fa}
+      \strng{bibnamehash}{61b3fddb2be4e7b4d7ef24e3c136c0fa}
+      \strng{authorbibnamehash}{61b3fddb2be4e7b4d7ef24e3c136c0fa}
+      \strng{authornamehash}{61b3fddb2be4e7b4d7ef24e3c136c0fa}
+      \strng{authorfullhash}{61b3fddb2be4e7b4d7ef24e3c136c0fa}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Unpublished manuscript, Centre for Applied Cross-Cultural Research, Victoria University of Wellington, New Zealand}
+      \field{title}{A brief version of the environmental attitudes inventory}
+      \field{year}{2007}
+    \endentry
+    \entry{oses2008environmental}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=d4bfdfb3e3a95d094210aed6c933faaf}{%
+           family={Osés-Eraso},
+           familyi={O\bibinithyphendelim E\bibinitperiod},
+           given={Nuria},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=08a2b8522b51cdbc2960ff97a4e2d886}{%
+           family={Udina},
+           familyi={U\bibinitperiod},
+           given={Frederic},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c9d1b642b5bfc83b43f427e80e5e5ab9}{%
+           family={Viladrich-Grau},
+           familyi={V\bibinithyphendelim G\bibinitperiod},
+           given={Montserrat},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{24eab4c73ddabb415ac4b16252a7a272}
+      \strng{fullhash}{24eab4c73ddabb415ac4b16252a7a272}
+      \strng{bibnamehash}{24eab4c73ddabb415ac4b16252a7a272}
+      \strng{authorbibnamehash}{24eab4c73ddabb415ac4b16252a7a272}
+      \strng{authornamehash}{24eab4c73ddabb415ac4b16252a7a272}
+      \strng{authorfullhash}{24eab4c73ddabb415ac4b16252a7a272}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Environmental and Resource Economics}
+      \field{title}{Environmental versus human-induced scarcity in the commons: do they trigger the same response?}
+      \field{volume}{40}
+      \field{year}{2008}
+      \field{pages}{529\bibrangedash 550}
+      \range{pages}{22}
+    \endentry
+    \entry{pfaff2015framed}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=437e58df2d31d3249b12eb7ab12806f9}{%
+           family={Pfaff},
+           familyi={P\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a063ffd2d49b69d86815c0ef47a113c0}{%
+           family={Vélez},
+           familyi={V\bibinitperiod},
+           given={Maria\bibnamedelima Alejandra},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=eafa528577260c1a6a562bc820dbde48}{%
+           family={Ramos},
+           familyi={R\bibinitperiod},
+           given={Pablo\bibnamedelima Andres},
+           giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a03b41810b5a054672b4b38db856feb5}{%
+           family={Molina},
+           familyi={M\bibinitperiod},
+           given={Adriana},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{aac188ac1bea877f9f9d7bf36c6c3fa3}
+      \strng{fullhash}{3b0e6be3e5efcbda6c29e43533fe230d}
+      \strng{bibnamehash}{3b0e6be3e5efcbda6c29e43533fe230d}
+      \strng{authorbibnamehash}{3b0e6be3e5efcbda6c29e43533fe230d}
+      \strng{authornamehash}{aac188ac1bea877f9f9d7bf36c6c3fa3}
+      \strng{authorfullhash}{3b0e6be3e5efcbda6c29e43533fe230d}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Ecological Economics}
+      \field{title}{Framed field experiment on resource scarcity \& extraction: path-dependent generosity within sequential water appropriation}
+      \field{volume}{120}
+      \field{year}{2015}
+      \field{pages}{416\bibrangedash 429}
+      \range{pages}{14}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput

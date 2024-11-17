@@ -1,0 +1,149 @@
+\documentclass[11pt, a4paper, leqno]{article}
+\usepackage{a4wide}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{float, afterpage, rotating, graphicx}
+\usepackage{epstopdf}
+\usepackage{longtable, booktabs, tabularx}
+\usepackage{fancyvrb, moreverb, relsize}
+\usepackage{eurosym, calc}
+% \usepackage{chngcntr}
+\usepackage{amsmath, amssymb, amsfonts, amsthm, bm}
+\usepackage{caption}
+\usepackage{mdwlist}
+\usepackage{xfrac}
+\usepackage{setspace}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{subcaption}
+\usepackage{minibox}
+\usepackage{graphicx}
+\graphicspath{{/bld/tables/}{/bld/graphs/}} % Specify the correct path for the missing image files
+
+% \usepackage{pdf14} % Enable for Manuscriptcentral -- can't handle pdf 1.5
+% \usepackage{endfloat} % Enable to move tables / figures to the end. Useful for some
+% submissions.
+
+\usepackage[
+    natbib=true,
+    bibencoding=inputenc,
+    bibstyle=authoryear-ibid,
+    citestyle=authoryear-comp,
+    maxcitenames=3,
+    maxbibnames=10,
+    useprefix=false,
+    sortcites=true,
+    backend=biber
+]{biblatex}
+\AtBeginDocument{\toggletrue{blx@useprefix}}
+\AtBeginBibliography{\togglefalse{blx@useprefix}}
+\setlength{\bibitemsep}{1.5ex}
+\addbibresource{refs.bib}
+
+\usepackage[unicode=true]{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    anchorcolor=black,
+    citecolor=NavyBlue,
+    filecolor=black,
+    menucolor=black,
+    runcolor=black,
+    urlcolor=NavyBlue
+}
+
+
+\widowpenalty=10000
+\clubpenalty=10000
+
+\setlength{\parskip}{1ex}
+\setlength{\parindent}{0ex}
+\setstretch{1.5}
+
+
+\begin{document}
+
+\title{Does an increased risk of climate shocks affect individual resource extraction behaviour?
+\thanks{Patricia Puspitasari, University of Bonn. Email: \ref{mailto:s75ppusp@uni-bonn.de}{\nolinkurl{s75ppusp [at] uni-bonn [dot] de}}.}}
+
+\author{Patricia Puspitasari}
+
+\date{
+    {\bf Preliminary -- please do not quote}
+    \\[1ex]
+    \today
+}
+
+\maketitle
+
+
+\begin{abstract}
+    \input{sections/01Abstract}
+\end{abstract}
+
+\clearpage
+
+
+\section{Experimental Procedure}\label{main:section3}
+\input{sections/03.1Experimental Procedure}
+
+\section{Experimental Design}\label{main:section32}
+\input{sections/03.12Experimental Design Intro}
+
+    \subsection{Basline Game}\label{main:section32a}
+    \input{sections/03.21Baseline Game}
+
+        \subsubsection{Behavioural Prediction in Baseline Game}\label{main:section32b}
+        \input{sections/03.21Behavioural Prediction Baseline}
+
+    \subsection{Anticipation Game}\label{main:section33a}
+    \input{sections/03.22Anticipation Game}
+
+        \subsubsection{Behavioural Prediction in Anticipation Game}\label{main:section33b}
+        \input{sections/03.22Behavioural Prediction Anticipation}
+
+    \subsection{Scarcity Game}\label{main:section34a}
+    \input{sections/03.23Scarcity Game}
+
+        \subsubsection{Behavioural Prediction in Scarcity Game}\label{main:section34b}
+        \input{sections/03.23Scarcity Game}
+
+\section{Descriptive Statistics}\label{main:section41}
+\subfile{sections/04.1 Descriptive Statistics}
+\section{Results}\label{main:section42}
+\subfile{sections/04.2Lab Subjects Results}
+If you are using this template, please cite this item from the references:
+%\citet{GaudeckerEconProjectTemplates}. CHECK IF THIS COMES OUT
+
+
+% section introduction (end)
+
+
+
+\setstretch{1}
+\printbibliography
+\setstretch{1.5}
+
+
+ \appendix
+ \section{Appendix D - Lab Experiment Instructions}\label{app:A}
+ \vspace{15pt}
+ \subsection{Welcome Page}
+ \subfile{sections/06.A1 Welcome Page}
+
+     \subsection{Instructions for Baseline Game}
+     \subfile{sections/06.A2 Baseline Instructions}
+
+     \subsection{Example}
+     \subfile{sections/06.A3 Example Page}
+
+     \subsection{Instructions for Anticipation Game}
+     \subfile{sections/06.A4 Anticipation Instruction}
+
+     \subsection{Instructions for Scarcity Game}
+     \subfile{sections/06.A5 Scarcity Instructions}
+
+% The chngctr package is needed for the following lines.
+ \counterwithin{table}{section}
+ \counterwithin{figure}{section}
+
+\end{document}

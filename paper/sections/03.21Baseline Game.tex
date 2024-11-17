@@ -1,0 +1,44 @@
+Our baseline forestry extraction game is designed to simulate a dynamic forestry resource. The initial number of forest resource consists of 100 trees. In each round, participants can take a maximum of seven trees from the forest resource. The baseline game lasts five rounds where participants can extract trees from the shared group forest in every round. After all members of the group have made their extraction decision, the total number of resource extracted will be deducted from the forest resource.
+
+ The forest resource stock will regrow at 10\% rate in every round after extraction decision were made. For example, in the first round, given a total of 21 trees extracted, 79 trees remained in the forest. With the 10\% regrowth rate, 7.9 trees will then be added to the resource stock where the game will start in the second round with 86,9 trees. Despite the allowed regrowth rate, the forest stock cannot grow beyond its full capacity of 100 trees. We did not round down the number of trees regrown, but rather, allowed participants to only extract a fully grown tree represented by the integer numbers. Participants were also informed at the beginning of the experiment that for each trees extracted in each round, he or she will earn two points. Participants will also receive a one time payment of endowment in the amount of 50 points at the start of each game. However, this endowment is paid only once as a show up fee and does not influence the decision of participants throughout the game. Therefore, we will not include participants' endowment into the payoff function from here onwards.
+
+ In addition to the trees harvested and the endowment, the participants were also told that the second element of their payoff will depend on the remaining number of trees left in the group's shared forest at the end of the 5$^{th}$ round after extraction and regrowth. These remaining trees will then double in value (4 points) and all group members will receive equal share of this value\footnote{see Appendix\ref{app:A} for detailed instructions of the experiment.}.
+
+
+\paragraph{\textit{The Payoff Function.}}
+
+Using game theoretical framework, the benchmark prediction on the standard individual extraction behaviour in our baseline game will depend on their payoff function. In the baseline game, the social payoff is the sum of individual group member \textit{i}'s payoff function. As a consequence both in group social payoff and individual payoff function will have \textbf{two} main components.
+
+ The first component is their expected total individual payoff from harvesting the trees. Each individual $i$ in a group of 3 ($i \in \{1,2,3\}$) is allowed to extract $x$ number of trees at each round where $x \in \{0,1,2,3,4,5,6,7\}$, and each tree has a value of 2 points. With each game lasting 5 rounds, let $t\in \{1,2,3,4,5\}$ be the number of round this person is currently in. The expected total individual payoff from harvesting in all 5 rounds is then; $2\sum_{t=1}^{5}(x_{i,t})$. For each group consisting 3 individuals, the total harvest of a group in each round can be expressed as $X_{t} = \sum_{i=1}^{3} x_{i,t} $. Therefore, we can express the first component for each group's social payoff function as $2 \sum_{t=1}^{5} X_{t}$.
+
+ The second component of the payoff function is the expected payoff from remaining trees in the forest at the end of the game (after regrowth in round 5). The remaining trees in the forest will depend on all player's extraction decision and the regrowth rate of $10\%$ in each round. In addition to that, the number of remaining trees in the forest cannot exceed 100 trees or fall below 0 at any given round. Thus, let $Z_t$ denote the number of trees that remained in the forest after harvesting and regrowth in a given round, where $0\leq Z_t \leq100$.
+
+ In the first round of our baseline game every group began with 100 trees in their shared forest. Therefore, the remaining trees left in the first round can be expressed as $Z_{1}=(100-X_{1}) \times 1.1$. The second round remaining trees will then depend on remaining trees in round 1 and total number of trees extracted as a group. $Z_{2}$ is then defined as $Z_{2} = Z_{1} - X_{2} = (100-X_{1}) - X_{2}$. For subsequent rounds we follow the same pattern up until the last round, where $Z_5 = (Z_4 - X_5) 1.1$. This means that to find the remaining trees in the final round ($Z_5$) to determine individual and group expected social payoff from the remaining trees, we can define $Z_{5}$ as
+\begin{equation}
+\label{eq:1}
+      Z_{5} = \left( \left( \left( \left( \left(100 - X_{1}\right) 1.1 - X_{2}\right) 1.1 - X_{3} \right) 1.1 - X_{4} \right) 1.1 - X_{5} \right) 1.1
+\end{equation}
+%where it simplifies to
+%\begin{equation}
+%\label{eq:2}
+%    Z_{5} = 161.051 - 1.61051X_{1} - 1.4641X_{2} - 1.331X_{3} - 1.21X_{4} - 1.1X_{5}
+%\end{equation}
+%Combining equation (1) and (2) gives
+%\begin{equation}
+%\label{eq:3}
+%    \pi_{i}=50+2\sum_{t=1}^{5} (x_{i,t})+\left( (161.051 - 1.61051X_{1} - 1.4641X_{2} - 1.331X_{3} - 1.21X_{4} - 1.1X_{5}) \times \frac{4}{3} \right)
+%\end{equation}
+
+\noindent Variable $Z_{5}$ defines the number of trees remained in a group's forest by the end of the 5$^{th}$ round and after the final regrowth rate. Each tree will be worth 4 points for the group, to be divided equally among three members of the group. The final part of each individual's payoff can then be expressed as $\frac{Z_{5} \times 4}{3}$. While the group payoff from trees that remained is $ \left(\frac{Z_{5} \times 4}{3}\right) \times 3 = Z_{5} \times {4}$.
+
+\noindent Combining both payoff components, we have individual $i$'s payoff function with $i \in \{1,2,3\}$ as:
+\begin{equation}
+\label{eq:2}
+    \pi_{i}=2\sum_{t=1}^{5} (x_{i,t})+\left( \frac{Z_{5} \times 4}{3} \right)
+\end{equation}
+
+\noindent And the group's payoff function as:
+\begin{equation}
+\label{eq:3}
+    \Pi_{group} = \sum_{i=1}^{3} \pi_{i} = 2 \sum_{t=1}^{5} X_{t} + \left(Z_5 \times 4 \right)
+\end{equation}

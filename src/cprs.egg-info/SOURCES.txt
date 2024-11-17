@@ -1,0 +1,136 @@
+.DS_Store
+CITATION
+LICENSE
+MANIFEST.in
+README.md
+cprs_pres.pdf
+pyproject.toml
+setup.cfg
+.pytask/file_hashes.json
+.pytask/pytask.sqlite3
+bld/.DS_Store
+bld/data/ALL_CLEANED.arrow
+bld/data/anticipation_clean.arrow
+bld/data/baseline_clean.arrow
+bld/data/data_clean.arrow
+bld/data/questionnaire_clean.arrow
+bld/data/scarcity_clean.arrow
+bld/data/shock_clean.arrow
+bld/graphs/0.Nash&Cooperative Anticipation.png
+bld/graphs/0.Nash&Cooperative Baseline.png
+bld/graphs/0.Nash&Cooperative Scarcity.png
+bld/graphs/0.Tradeoff1.png
+bld/graphs/0.Tradeoff2.png
+bld/graphs/0.Tradeoff3.png
+bld/graphs/1_Group_Beh_remain_starting_trees_baseline.png
+bld/graphs/1_Individual_Beh_current_trees_baseline.png
+bld/graphs/2_Group_Beh_remain_starting_trees_anticipation.png
+bld/graphs/2_Individual_Beh_current_trees_anticipation.png
+bld/graphs/3_Group_Beh_remain_starting_trees_shock.png
+bld/graphs/3_Individual_Beh_current_trees_shock.png
+bld/latex/cprs.aux
+bld/latex/cprs.bbl
+bld/latex/cprs.bcf
+bld/latex/cprs.blg
+bld/latex/cprs.fdb_latexmk
+bld/latex/cprs.fls
+bld/latex/cprs.log
+bld/latex/cprs.out
+bld/latex/cprs.run.xml
+bld/latex/cprs.toc
+bld/latex/cprs_pres.aux
+bld/latex/cprs_pres.bbl
+bld/latex/cprs_pres.bcf
+bld/latex/cprs_pres.blg
+bld/latex/cprs_pres.fdb_latexmk
+bld/latex/cprs_pres.fls
+bld/latex/cprs_pres.log
+bld/latex/cprs_pres.nav
+bld/latex/cprs_pres.out
+bld/latex/cprs_pres.pdf
+bld/latex/cprs_pres.run.xml
+bld/latex/cprs_pres.snm
+bld/latex/cprs_pres.synctex.gz
+bld/latex/cprs_pres.toc
+bld/tables/1. max harvest table.tex
+bld/tables/2. treatment split.tex
+bld/tables/4. expected value of trees.tex
+bld/tables/5. round decision.tex
+bld/tables/7. anticipation expected value calculation.tex
+inst/WORDLIST
+paper/.DS_Store
+paper/__init__.py
+paper/cprs.tex
+paper/refs.bib
+paper/task_paper.py
+paper/__pycache__/task_paper.cpython-311.pyc
+paper/sections/01Abstract.tex
+paper/sections/03.12Experimental Design Intro.tex
+paper/sections/03.1Experimental Procedure.tex
+paper/sections/03.21Baseline Game.tex
+paper/sections/03.21Behavioral Prediction Baseline.tex
+paper/sections/03.22Anticipation Game.tex
+paper/sections/03.22Behavioural Prediction Anticipation.tex
+paper/sections/03.23 Scarcity Game Theory.tex
+paper/sections/03.23Scarcity Game.tex
+paper/sections/04.1 Descriptive Statistics.tex
+paper/sections/06.A1 Welcome Page.tex
+paper/sections/06.A2 Baseline Instructions.tex
+paper/sections/06.A3 Example Page.tex
+paper/sections/06.A4 Anticipation Instruction.tex
+paper/sections/06.A5 Scarcity Instructions.tex
+paper/sections/06.B2 Anticipation Game Theory.tex
+src/.DS_Store
+src/cprs/.DS_Store
+src/cprs/__init__.py
+src/cprs/_version.py
+src/cprs/config.py
+src/cprs/data.arrow
+src/cprs.egg-info/PKG-INFO
+src/cprs.egg-info/SOURCES.txt
+src/cprs.egg-info/dependency_links.txt
+src/cprs.egg-info/not-zip-safe
+src/cprs.egg-info/requires.txt
+src/cprs.egg-info/top_level.txt
+src/cprs/__pycache__/__init__.cpython-311.pyc
+src/cprs/__pycache__/config.cpython-311.pyc
+src/cprs/analysis/__init__.py
+src/cprs/analysis/nash_anticipation.py
+src/cprs/analysis/nash_baseline.py
+src/cprs/analysis/nash_scarcity.py
+src/cprs/analysis/plot_anticipation_results.py
+src/cprs/analysis/plot_baseline_results.py
+src/cprs/analysis/plot_scarcity_results.py
+src/cprs/analysis/task_analysis.py
+src/cprs/analysis/__pycache__/__init__.cpython-311.pyc
+src/cprs/analysis/__pycache__/nash_anticipation.cpython-311.pyc
+src/cprs/analysis/__pycache__/nash_baseline.cpython-311.pyc
+src/cprs/analysis/__pycache__/nash_scarcity.cpython-311.pyc
+src/cprs/analysis/__pycache__/plot_anticipation_results.cpython-311.pyc
+src/cprs/analysis/__pycache__/plot_baseline_results.cpython-311.pyc
+src/cprs/analysis/__pycache__/plot_scarcity_results.cpython-311.pyc
+src/cprs/analysis/__pycache__/task_analysis.cpython-311.pyc
+src/cprs/data/Nash.xlsx
+src/cprs/data/all_apps_wide_2024-01-18.csv
+src/cprs/data_management/__init__.py
+src/cprs/data_management/clean_anticipation_data.py
+src/cprs/data_management/clean_baseline_data.py
+src/cprs/data_management/clean_questionnaire.py
+src/cprs/data_management/clean_raw_data.py
+src/cprs/data_management/clean_shock_data.py
+src/cprs/data_management/data_info.yaml
+src/cprs/data_management/lab_data_cleaned.arrow
+src/cprs/data_management/merge_clean_all_parts.py
+src/cprs/data_management/task_data_management.py
+src/cprs/data_management/__pycache__/__init__.cpython-311.pyc
+src/cprs/data_management/__pycache__/clean_anticipation_data.cpython-311.pyc
+src/cprs/data_management/__pycache__/clean_baseline_data.cpython-311.pyc
+src/cprs/data_management/__pycache__/clean_data.cpython-311.pyc
+src/cprs/data_management/__pycache__/clean_questionnaire.cpython-311.pyc
+src/cprs/data_management/__pycache__/clean_raw_data.cpython-311.pyc
+src/cprs/data_management/__pycache__/clean_shock_data.cpython-311.pyc
+src/cprs/data_management/__pycache__/merge_clean_all_parts.cpython-311.pyc
+src/cprs/data_management/__pycache__/task_data_management.cpython-311.pyc
+src/cprs/final/__init__.py
+src/cprs/final/task_final.py
+src/cprs/final/__pycache__/task_final.cpython-311.pyc

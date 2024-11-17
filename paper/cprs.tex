@@ -1,0 +1,144 @@
+\documentclass[11pt, a4paper, leqno]{article}
+\usepackage{a4wide}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{float, afterpage, rotating, graphicx}
+\usepackage{epstopdf}
+\usepackage{longtable, booktabs, tabularx}
+\usepackage{fancyvrb, moreverb, relsize}
+\usepackage{eurosym, calc}
+% \usepackage{chngcntr}
+\usepackage{amsmath, amssymb, amsfonts, amsthm, bm}
+\usepackage{caption}
+\usepackage{mdwlist}
+\usepackage{xfrac}
+\usepackage{setspace}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{subcaption}
+\usepackage{minibox}
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\usepackage{multirow} % Required to enable merging of columns/rows in a table
+\usepackage{booktabs} % Required for better horizontal rules in tables
+\usepackage[normalem]{ulem}
+
+\graphicspath{{/bld/tables/}{/bld/graphs/}} % Specify the correct path for the missing image files
+
+% \usepackage{pdf14} % Enable for Manuscriptcentral -- can't handle pdf 1.5
+% \usepackage{endfloat} % Enable to move tables / figures to the end. Useful for some
+% submissions.
+
+\usepackage[
+    natbib=true,
+    bibencoding=inputenc,
+    bibstyle=authoryear-ibid,
+    citestyle=authoryear-comp,
+    maxcitenames=3,
+    maxbibnames=10,
+    useprefix=false,
+    sortcites=true,
+    backend=biber
+]{biblatex}
+\AtBeginDocument{\toggletrue{blx@useprefix}}
+\AtBeginBibliography{\togglefalse{blx@useprefix}}
+\setlength{\bibitemsep}{1.5ex}
+\addbibresource{refs.bib}
+
+\usepackage[unicode=true]{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    anchorcolor=black,
+    citecolor=NavyBlue,
+    filecolor=black,
+    menucolor=black,
+    runcolor=black,
+    urlcolor=NavyBlue
+}
+
+
+\widowpenalty=10000
+\clubpenalty=10000
+
+\setlength{\parskip}{1ex}
+\setlength{\parindent}{0ex}
+\setstretch{1.5}
+
+
+\begin{document}
+
+\title{Does an increased risk of climate shocks affect individual resource extraction behaviour?
+\thanks{Patricia Puspitasari, University of Bonn. Email: \href{mailto:s75ppusp@uni-bonn.de}{\nolinkurl{s75ppusp [at] uni-bonn [dot] de}}.}}
+
+\author{Patricia Puspitasari}
+
+\date{
+    {\bf Preliminary -- please do not quote}
+    \\[1ex]
+    \today
+}
+
+\maketitle
+
+
+\begin{abstract}
+    \input{sections/01 Abstract.tex}
+\end{abstract}
+
+\clearpage
+
+\section{Experimental Procedure, Design and Behavioural Prediction }\label{main:section3}
+    \subsection{Experimental Procedure}\label{main:section31}
+        \input{sections/03.1Experimental Procedure.tex}
+
+    \subsection{Experimental Design}\label{main:section32}
+        \input{sections/03.12Experimental Design Intro.tex}
+            \subsubsection{Baseline Game}\label{main:section32a}
+                \input{sections/03.21Baseline Game.tex}
+            \subsubsection{Behavioural Prediction in Baseline Game}\label{main:section32b}
+                \input{sections/03.21Behavioral Prediction Baseline.tex}
+            \subsubsection{Anticipation Game}\label{main:section33a}
+                \input{sections/03.22Anticipation Game.tex}
+            \subsubsection{Behavioural Prediction in Anticipation Game}\label{main:section33b}
+                \input{sections/03.22Behavioural Prediction Anticipation.tex}
+            \subsubsection{Scarcity Game}\label{main:section34a}
+                \input{sections/03.23Scarcity Game.tex}
+            \subsubsection{Behavioural Prediction in Scarcity Game}\label{main:section34b}
+                \input{sections/03.23 Scarcity Game Theory.tex}
+
+
+\section{Results}\label{main:section4}
+    \subsection{Descriptive Statistics}\label{main:section41}
+    \input{sections/04.1 Descriptive Statistics.tex}
+
+    \subsection{Lab Subject Behaviour Results}\label{main:section42}
+    \input{sections/04.2Lab Subjects Results}
+
+    %\subsection{Increased risk of climate shock leads to higher extraction rate}\label{main:section42}
+    %\subfile{04.2 H1}
+
+
+\setstretch{1}
+\printbibliography
+\setstretch{1.5}
+
+\appendix
+    \section{Appendix D Lab Experiment Instructions}\label{app:A}
+    \vspace{15pt}
+    \subsection{Welcome Page}
+    \input{sections/06.A1 Welcome Page}
+
+        \subsection{Instructions for Baseline Game}
+        \input{sections/06.A2 Baseline Instructions}
+
+        \subsection{Example}
+        \input{sections/06.A3 Example Page}
+
+        \subsection{Instructions for Anticipation Game}
+        \input{sections/06.A4 Anticipation Instruction}
+
+        \subsection{Instructions for Scarcity Game}
+        \input{sections/06.A5 Scarcity Instructions}
+
+
+\end{document}

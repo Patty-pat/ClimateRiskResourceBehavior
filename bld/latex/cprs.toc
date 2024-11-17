@@ -1,0 +1,18 @@
+\contentsline {section}{\numberline {1}Experimental Procedure, Design and Behavioural Prediction }{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Experimental Procedure}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Experimental Design}{2}{subsection.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.1}Baseline Game}{2}{subsubsection.1.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.2}Behavioural Prediction in Baseline Game}{2}{subsubsection.1.2.2}%
+\contentsline {subsubsection}{\numberline {1.2.3}Anticipation Game}{2}{subsubsection.1.2.3}%
+\contentsline {subsubsection}{\numberline {1.2.4}Behavioural Prediction in Anticipation Game}{2}{subsubsection.1.2.4}%
+\contentsline {subsubsection}{\numberline {1.2.5}Scarcity Game}{2}{subsubsection.1.2.5}%
+\contentsline {subsubsection}{\numberline {1.2.6}Behavioural Prediction in Scarcity Game}{2}{subsubsection.1.2.6}%
+\contentsline {section}{\numberline {2}Results}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Descriptive Statistics}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Lab Subject Behaviour Results}{2}{subsection.2.2}%
+\contentsline {section}{\numberline {A}Appendix D Lab Experiment Instructions}{3}{appendix.A}%
+\contentsline {subsection}{\numberline {A.1}Welcome Page}{3}{subsection.A.1}%
+\contentsline {subsection}{\numberline {A.2}Instructions for Baseline Game}{3}{subsection.A.2}%
+\contentsline {subsection}{\numberline {A.3}Example}{3}{subsection.A.3}%
+\contentsline {subsection}{\numberline {A.4}Instructions for Anticipation Game}{3}{subsection.A.4}%
+\contentsline {subsection}{\numberline {A.5}Instructions for Scarcity Game}{3}{subsection.A.5}%

@@ -1,0 +1,45 @@
+%\documentclass[cprs.tex]{subfiles}
+In the second part of our game, we focused on the anticipation effect of a climate shock. The purpose of this game is to investigate how individual extraction behaviour changes when the individual anticipates a potential climate shock and how this effect is amplified when there is an increased risk of climate shock to occur.
+
+ To carry out the subsequent treatments, we placed the participants in a similar decision-making situation as in the Baseline game. Participants within a group remain the same and began the game with 100 trees in the shared forest. They may extract zero to seven trees per round. The difference to the baseline game is that, participants in a group were told that a climate shock might occur at the end of round five. In our game, a climate shock is framed in the context of a forest fire caused by drought and persistent heat, which destroys the trees in the shared forest. If a forest fire occurs at the end of the fifth round, the number of remaining trees will then be reduced by 50\% after the forest has regenerated. In order to observe the extent to which the subjects respond to an increased risk of a climate shock as described above, we created a between subject design in which we randomly assigned the groups equally into a high or a low probability shock group. The groups that were assigned to the high probability shock groups were told that they have 80\% chance of losing their remaining trees to a forest fire at the end of the game. The other half were assigned to the low probability group where they were told similar case but with only 20\% chance that a fire may occur.
+
+\paragraph{\textit{The Payoff Function.}}
+
+The payoff function under Anticipation game is similar to the Baseline game. The difference however is that the expected value of trees not harvested at the end of round five ($Z_5$) will no longer hold the same value of four as was in the previous game. Due to the presence of uncertainty, the expected value of the remaining trees changes according to the probability of forest fire occurring in a group's forest. Thus, individual expected payoff of those who were assigned to a high or low probability group can be expressed as
+\begin{equation}
+\label{eq:10}
+    \pi_{i} = 2\sum_{t=1}^{5} (x_{i,t})+  Z_{5} \times 4 \left[ \dfrac{(0.5 \times p)+(1 \times 1-p)}{3} \right] \\
+\end{equation}
+And the group expected payoff adjusted to
+\begin{equation}
+\label{eq:11}
+    \Pi_{group} = 2\sum_{t=1}^{5} (x_{i,t})+ Z_{5} \times 4 \left[ (0.5 \times p)+(1 \times 1-p) \right]
+\end{equation}
+
+ Table\ref{tab:7} summarizes the change in expected value from increased risk by calculating the expected value using the last term in equation\ref{eq:11}.
+
+\input{../bld/tables/7. anticipation expected value calculation}
+
+%\noindent Given this change in expected value, the individual and group payoff function for high probability group are now defined as $\pi_{i}^{high}=2\sum_{t=1}^{5} (x_{i,t})+ \left( Z_{5} \times \frac{2.4}{3} \right)$, and $\Pi_{group}^{high}=2\sum_{t=1}^{5} (X_{t})+ \left( Z_{5} \times {2.4} \right)$ respectively. Similarly, the individual and group expected payoff function of those assigned to a low probability group can be expressed as $\pi_{i}^{low}=2\sum_{t=1}^{5} (x_{i,t})+ \left( Z_{5} \times \frac{3.6}{3} \right)$ and $\Pi_{group}^{low}=2\sum_{t=1}^{5} (X_{t})+ \left( Z_{5} \times {3.6} \right)$.
+
+\noindent Given this change in expected value, the individual and group payoff function for high probability group are now defined as
+\begin{equation}
+\label{eq:4}
+    \pi_{i}^{high}=2\sum_{t=1}^{5} (x_{i,t})+ \left( Z_{5} \times \frac{2.4}{3} \right)
+\end{equation}
+\begin{equation}
+\label{eq:5}
+    \Pi_{group}^{high}=2\sum_{t=1}^{5} (X_{t})+ \left( Z_{5} \times {2.4} \right)
+\end{equation}
+
+\noindent Similarly, the individual and group expected payoff function of those assigned to a low probability group can be expressed as
+\begin{equation}
+\label{eq:6}
+    \pi_{i}^{low}=2\sum_{t=1}^{5} (x_{i,t})+ \left( Z_{5} \times \frac{3.6}{3} \right)
+\end{equation}
+\begin{equation}
+\label{eq:7}
+    \Pi_{group}^{low}=2\sum_{t=1}^{5} (X_{t})+ \left( Z_{5} \times {3.6} \right)
+\end{equation}
+
+ Following the baseline game, the number of trees remained in the forest at the end of the game ($Z_{5}$) depends on the previous rounds extraction decision and the 10\% regrowth rate. This potential 50\% drop in social payoff reduces their expected future value. The increase in uncertainty of their social payoff provides an incentive for participants to extract more earlier in the game to gain payoff for themselves now rather than uncertain outcome in the future.

@@ -1,0 +1,25 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is '/Users/patriciasuratno/Documents/epp_project/final-project-Patty-pat-1/bld/latex/cprs.blg'
+[36] biber-darwin:340> INFO - === Sun Mar 10, 2024, 21:15:46
+[45] Biber.pm:419> INFO - Reading '/Users/patriciasuratno/Documents/epp_project/final-project-Patty-pat-1/bld/latex/cprs.bcf'
+[87] Biber.pm:979> INFO - Found 8 citekeys in bib section 0
+[95] Biber.pm:4419> INFO - Processing section 0
+[100] Biber.pm:4610> INFO - Looking for bibtex file 'refs.bib' for section 0
+[101] bibtex.pm:1713> INFO - LaTeX decoding ...
+[112] bibtex.pm:1519> INFO - Found BibTeX data source 'refs.bib'
+[154] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[154] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[154] Biber.pm:4239> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[154] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[159] bbl.pm:660> INFO - Writing '/Users/patriciasuratno/Documents/epp_project/final-project-Patty-pat-1/bld/latex/cprs.bbl' with encoding 'UTF-8'
+[162] bbl.pm:763> INFO - Output to /Users/patriciasuratno/Documents/epp_project/final-project-Patty-pat-1/bld/latex/cprs.bbl
+[162] Biber.pm:131> WARN - BibTeX subsystem: /var/folders/x3/9yqy4jbn0b15yhks0s73dqgw0000gn/T/biber_tmp_uaO_/8fe4c9854184545302f21ebf0d47516c_20536.utf8, line 12, warning: 1 characters of junk seen at toplevel
+[162] Biber.pm:131> WARN - BibTeX subsystem: /var/folders/x3/9yqy4jbn0b15yhks0s73dqgw0000gn/T/biber_tmp_uaO_/8fe4c9854184545302f21ebf0d47516c_20536.utf8, line 22, warning: 1 characters of junk seen at toplevel
+[162] Biber.pm:131> WARN - BibTeX subsystem: /var/folders/x3/9yqy4jbn0b15yhks0s73dqgw0000gn/T/biber_tmp_uaO_/8fe4c9854184545302f21ebf0d47516c_20536.utf8, line 32, warning: 1 characters of junk seen at toplevel
+[162] Biber.pm:131> WARN - BibTeX subsystem: /var/folders/x3/9yqy4jbn0b15yhks0s73dqgw0000gn/T/biber_tmp_uaO_/8fe4c9854184545302f21ebf0d47516c_20536.utf8, line 42, warning: 1 characters of junk seen at toplevel
+[162] Biber.pm:131> WARN - BibTeX subsystem: /var/folders/x3/9yqy4jbn0b15yhks0s73dqgw0000gn/T/biber_tmp_uaO_/8fe4c9854184545302f21ebf0d47516c_20536.utf8, line 49, warning: 1 characters of junk seen at toplevel
+[162] Biber.pm:131> WARN - BibTeX subsystem: /var/folders/x3/9yqy4jbn0b15yhks0s73dqgw0000gn/T/biber_tmp_uaO_/8fe4c9854184545302f21ebf0d47516c_20536.utf8, line 59, warning: 1 characters of junk seen at toplevel
+[162] Biber.pm:131> WARN - BibTeX subsystem: /var/folders/x3/9yqy4jbn0b15yhks0s73dqgw0000gn/T/biber_tmp_uaO_/8fe4c9854184545302f21ebf0d47516c_20536.utf8, line 69, warning: 1 characters of junk seen at toplevel
+[162] Biber.pm:131> WARN - BibTeX subsystem: /var/folders/x3/9yqy4jbn0b15yhks0s73dqgw0000gn/T/biber_tmp_uaO_/8fe4c9854184545302f21ebf0d47516c_20536.utf8, line 76, warning: 1 characters of junk seen at toplevel
+[162] Biber.pm:131> WARN - BibTeX subsystem: /var/folders/x3/9yqy4jbn0b15yhks0s73dqgw0000gn/T/biber_tmp_uaO_/8fe4c9854184545302f21ebf0d47516c_20536.utf8, line 92, warning: 1 characters of junk seen at toplevel
+[162] Biber.pm:133> INFO - WARNINGS: 9
